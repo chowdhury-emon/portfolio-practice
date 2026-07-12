@@ -24,23 +24,42 @@
 img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
 }
 
-p{
+p {
     line-height: 1.8rem;
+    color: var(--text-muted);
+    margin-block: 2rem;
 }
 
 a {
     cursor: pointer;
 }
 
+section {
+    height: 840px;
+    min-height: fit-content;
+}
+
 button {
-    padding: .5rem 1rem;
+    padding: 1rem 2rem;
     border: none;
-    border-radius: .25rem;
-    font-weight: 600;
+    border-radius: .3rem;
+    font-size: 1rem;
+    font-weight: bolder;
     cursor: pointer;
+
+    display: flex;
+    place-items: center;
+    gap: .5rem;
+
+    svg.lucide {
+        width: 1.2rem;
+        aspect-ratio: 1;
+        stroke: white;
+    }
+
 }
 
 .primary-button {
@@ -53,16 +72,21 @@ button {
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
 
-}
+    svg.lucide {
+        stroke: var(--primary-color);
+    }
 
-section {
-    height: 840px;
 }
 
 .container {
     max-width: var(--max-width);
+    height: 100%;
     display: grid;
     place-self: center;
+}
+
+.title {
+    font-size: 2.2rem;
 }
 
 
@@ -92,6 +116,7 @@ header {
 
     .logo {
         h1 {
+            font-size: 2.5rem;
             font-weight: 800;
         }
 
@@ -103,6 +128,7 @@ header {
     nav ul {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 2rem;
 
         li {
@@ -110,14 +136,9 @@ header {
 
             a {
                 padding: .5rem 1rem;
-
                 border-radius: .25rem;
                 text-decoration: none;
                 color: var(--text-secondary);
-            }
-
-            a.primary-button {
-                padding: 1rem 2rem;
             }
 
         }
@@ -134,7 +155,6 @@ header {
 
     .container {
         position: relative;
-        height: 100%;
         grid-template-columns: repeat(2, 1fr);
 
         .developer-image {
@@ -145,7 +165,7 @@ header {
             transform: translateX(-150%);
             display: grid;
             place-items: center;
-             
+
             img {
                 height: 100%;
             }
@@ -157,19 +177,13 @@ header {
 
 
             h2 {
-                font-size: 3rem;
+                font-size: 2.5rem;
                 font-weight: 600;
 
             }
 
             h1 {
-                font-size: 5rem;
-
-            }
-
-            p {
-                color: var(--text-muted);
-                margin-block: 2rem;
+                font-size: 4.7rem;
             }
 
             .hero-content__buttons {
@@ -215,25 +229,26 @@ header {
         gap: 2rem;
         background-color: var(--primary-bg);
 
-        p{
+        p {
             text-align: center;
             color: var(--text-muted);
             margin-inline: 13%;
         }
-        
-        .about-section_contacts{
+
+        .about-section_contacts {
             display: grid;
             grid-auto-flow: column;
             gap: 2rem;
 
-            div{
+            div {
                 place-items: center;
 
-                h4{
-                    color:var(--text-secondary) ;
+                h4 {
+                    color: var(--text-secondary);
                 }
             }
-
         }
     }
 }
+
+.skills-section {}
