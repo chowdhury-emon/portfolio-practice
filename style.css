@@ -30,7 +30,6 @@ img {
 p {
     line-height: 1.8rem;
     color: var(--text-muted);
-    margin-block: 2rem;
 }
 
 a {
@@ -80,13 +79,22 @@ button {
 
 .container {
     max-width: var(--max-width);
+    width: 100%;
     height: 100%;
     display: grid;
     place-self: center;
 }
 
 .title {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    margin-block: 2rem;
+    max-width: 50rem;
+    place-self: center;
 }
 
 
@@ -175,15 +183,18 @@ header {
             display: grid;
             place-self: center;
 
-
             h2 {
                 font-size: 2.5rem;
                 font-weight: 600;
 
             }
 
-            h1 {
+            .hero-content__title {
                 font-size: 4.7rem;
+            }
+
+            .subtitle {
+                text-align: left;
             }
 
             .hero-content__buttons {
@@ -193,7 +204,7 @@ header {
         }
     }
 
-    .hero-image {
+    .hero-images {
         position: relative;
 
         img {
@@ -226,12 +237,10 @@ header {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 2rem;
+
         background-color: var(--primary-bg);
 
-        p {
-            text-align: center;
-            color: var(--text-muted);
+        .subtitle {
             margin-inline: 13%;
         }
 
@@ -251,4 +260,33 @@ header {
     }
 }
 
-.skills-section {}
+.skills-section {
+    .container.cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+
+        .card{
+            background: #fff;
+            display: grid;
+            grid-template-rows: auto auto 1fr;
+            gap: 1.5rem;
+            max-height: 23rem;
+            padding: 1.5rem;
+            border-radius: .3rem;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
+
+            .card__logo img{
+                width: 2.5rem;
+            }
+            .card__title{
+                font-size: 1.1rem;
+            }
+            .card__description{
+                font-size: .92rem;
+                color: var(--text-muted);
+            }
+
+        }
+    }
+
+}
