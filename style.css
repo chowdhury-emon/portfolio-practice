@@ -7,6 +7,8 @@
     --text-primary: #181818;
     --text-secondary: #474747;
     --text-muted: #757575;
+
+    --border-clr: #D1D1D1;
 }
 
 /* Universal Styles */
@@ -261,11 +263,15 @@ header {
 }
 
 .skills-section {
+    height: fit-content;
+    margin-bottom: 7rem;
+
     .container.cards-grid {
         grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
 
-        .card{
+
+        .card {
             background: #fff;
             display: grid;
             grid-template-rows: auto auto 1fr;
@@ -275,18 +281,74 @@ header {
             border-radius: .3rem;
             box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
 
-            .card__logo img{
+            .card__logo img {
                 width: 2.5rem;
             }
-            .card__title{
+
+            .card__title {
                 font-size: 1.1rem;
             }
-            .card__description{
+
+            .card__description {
                 font-size: .92rem;
                 color: var(--text-muted);
             }
 
         }
     }
+}
 
+.resume-section {
+
+    .container {
+        height: fit-content;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-block: 6rem 2rem;
+
+
+        .resume__grid {
+            display: grid;
+            height: fit-content;
+
+            .resume__title {
+                margin-bottom: 1rem;
+                color: var(--text-secondary);
+            }
+
+            .qualification-card {
+                display: grid;
+                gap: .5rem;
+                padding: 2rem 0;
+                height: fit-content;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid var(--border-clr);
+                }
+
+                .card__title {
+                    color: var(--text-secondary);
+                }
+
+                .card__subtitle {
+                    color: var(--text-muted);
+                    font-weight: 600;
+                    margin-bottom: .5rem;
+                }
+
+                .card__description {
+                    color: var(--text-muted);
+                    line-height: 1.5rem;
+                }
+
+                .card__description {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+
+    .primary-button {
+        place-self: center;
+    }
 }
