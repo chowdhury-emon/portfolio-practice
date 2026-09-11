@@ -1,0 +1,1 @@
+Figma to Code: A pixel-perfect portfolio website project featuring 100% fidelity to the original Figma design. Developed with a strict focus on pixel perfection, responsive layouts, semantic HTML, and optimized performance.
